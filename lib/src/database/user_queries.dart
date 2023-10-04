@@ -1,5 +1,21 @@
 import 'package:flutter_webapp/src/database/connection.dart';
 
+Future<Map<String, dynamic>?> getUserByEmail(string email) async {
+  final connection = getConnection();
+  await connection.open();
+
+  List<Map<String, Map<String, dynamic>>> results = await connection.mappResultsQuery(
+    'SELECT * FROM users WHERE email = @e',
+    substitutionValues: {'e': email},
+  );
+
+  await connection.close();
+
+  if (results.isEmpty) return null;
+
+  return results.first['users']!;
+}
+
 Future<void> createUser(String email, String password) async {
   final connection = getConnection();
   await connection.open();
