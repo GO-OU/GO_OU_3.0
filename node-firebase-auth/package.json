@@ -1,0 +1,26 @@
+{
+  "name": "firebase-auth",
+  "version": "1.0.0",
+  "description": "Node.js backend for Firebase authentication",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GO-OU/Go-OU_3.0.git"
+  },
+  "keywords": [
+    "authentication",
+    "firebase"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GO-OU/Go-OU_3.0/issues"
+  },
+  "homepage": "https://github.com/GO-OU/Go-OU_3.0#readme",
+  "dependencies": {
+    "firebase-admin": "^11.11.0"
+  }
+}
